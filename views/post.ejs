@@ -1,0 +1,46 @@
+<div class="projects-section">
+  <div class="projects-content">
+    <section class="title-header">
+      <h1><%=data.title %></h1>
+      <p class="text-primary">
+        This page contains the case practice of <%=data.title %> which includes
+        the Project Overview, Tools Used and Project Links.
+      </p>
+      <button
+        class="project-header-btn"
+        onclick="window.open('<%= data.projectUrl %>', '_blank')"
+      >
+        PROJECT LINK
+      </button>
+    </section>
+
+    <section class="image">
+      <img class="post-image" src="<%=data.image %>" alt="screenshort" />
+    </section>
+    <section class="overview">
+      <h2>Project Overview</h2>
+      <article class="article"><%-data.body %></article>
+    </section>
+    <section class="tools-section">
+      <h2>Tools Used</h2>
+      <div class="tools">
+        <% data.tools.forEach(language => { %>
+        <button><%= language %></button>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="discover-section">
+      <h2>Discover</h2>
+      <div class="actions">
+        <button
+          class="project-link"
+          onclick="window.open('<%= data.projectUrl %>', '_blank')"
+        >
+          PROJECT LINK
+        </button>
+        <button class="go-back" onclick="location.href='/'">GO BACK</button>
+      </div>
+    </section>
+  </div>
+</div>

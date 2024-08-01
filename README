@@ -1,0 +1,12 @@
+# Installation
+
+To install and run this project - install dependencies using npm and then start your server:
+
+$ npm init -y
+$ npm i bcrypt connect-mongo cookie-parser dotenv ejs express express-ejs-layouts express-session jsonwebtoken method-override mongoose
+$ npm run dev
+
+# Script in package.json
+
+    "start": "app.js",
+    "dev": "nodemon app.js"

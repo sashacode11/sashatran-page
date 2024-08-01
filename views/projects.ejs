@@ -1,0 +1,23 @@
+<h1 style="text-align: center">PROJECTS</h1>
+<p class="intro">
+  Here you can explore a selection of personal and client projects I've
+  developed, each accompanied by a detailed case study.
+</p>
+<ul class="article-ul">
+  <% data.forEach(post => { %>
+  <li>
+    <a href="/post/<%=post._id %>" class="article-details">
+      <span
+        ><img src="<%=post.image %>" alt="falling-leaves" class="article-image"
+      /></span>
+      <span class="article-title">
+        <h3><%=post.title %></h3>
+        <p class="article-summary"><%=post.summary %></p>
+      </span>
+    </a>
+  </li>
+  <% }) %>
+</ul>
+<% if (nextPage !== null) { %>
+<a href="/?page=<%=nextPage %>" class="pagination">&lt; View Older Projects</a>
+<% } %>

@@ -1,0 +1,28 @@
+<div class="author">
+  <h1 class="author__heading">Search Results</h1>
+</div>
+
+<section class="article">
+  <% if (locals.noResults) { %>
+  <p class="no-results">No results found.</p>
+  <% } else { %>
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+    <li>
+      <a href="/post/<%=post._id %>" class="article-details">
+        <span
+          ><img
+            src="<%=post.image %>"
+            alt="falling-leaves"
+            class="article-image"
+        /></span>
+        <span class="article-title">
+          <h3><%=post.title %></h3>
+          <p class="article-title"><%=post.summary %></p>
+        </span>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+  <% } %>
+</section>
