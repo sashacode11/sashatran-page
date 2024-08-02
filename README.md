@@ -17,4 +17,5 @@ This web application provides a user-friendly interface for managing personal ta
 - Express.js
 - MongoDB
 - Summernote Rich Text
-![image](https://github.com/user-attachments/assets/eb80acc2-522c-43ab-b498-603e33f75eca)
+![screencapture](https://github.com/user-attachments/assets/24b96ccb-e088-4a9b-9c55-b15985302961)
+
