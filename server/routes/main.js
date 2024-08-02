@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post');
+const nodemailer = require('nodemailer');
 
 const adminLayout = '../views/layouts/admin';
 const authMiddleware = require('../../middleware/authMiddleware');
@@ -99,6 +100,58 @@ router.post('/search', async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+// const html = `
+// <h1>Hello World</h1>
+// <p>Isn't NodeMailer useful?
+// `;
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+// async function mail() {
+//   const info = await transporter.sendMail({
+//     from: process.env.EMAIL_USER,
+//     to: process.env.EMAIL_USER,
+//     subject: 'New Message wooo!',
+//     // text: `Message from ${name} (Email: ${email}): ${message}`,
+//     html: html,
+//   });
+
+//   console.log('Message sent' + info.messageId);
+// }
+
+// mail().catch(e => console.log(e));
+
+router.post('/submit-form', async (req, res) => {
+  const { name, email, message } = req.body;
+  try {
+    const info = await transporter.sendMail({
+      from: process.env.EMAIL_USER, // Sender address
+      to: process.env.EMAIL_USER, // Your email, to receive messages
+      subject: `New Message from ${name}`,
+      html: `<p>You have received a new message from:</p>
+                 <p>Name: ${name}</p>
+                 <p>Email: ${email}</p>
+                 <p>Message: ${message}</p>`,
+    });
+    console.log('Message sent: ' + info.messageId);
+    res.redirect('/thanks');
+  } catch (error) {
+    console.log(error);
+    res.status(500).send('Failed to send message.');
+  }
+});
+
+router.get('/thanks', (req, res) => {
+  res.render('thanks');
 });
 
 // router.get('', async (req, res) => {

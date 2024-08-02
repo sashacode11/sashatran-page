@@ -62,10 +62,15 @@ textarea {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
+.back-btn {
+  margin-top: 1.5rem;
+}
 .orange-btn {
   background-color: orange;
+  padding: 8px 16px;
 }
 .blue-btn {
   /* background-color: var(--deep-cyan); */
@@ -468,6 +473,8 @@ img {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas: 'left-space content right-space';
   }
+
+  .contact-content,
   .projects-content,
   .about-content,
   .home-content {
@@ -499,6 +506,17 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .admin-post-controls {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-container {
+    left: 25%;
+    position: sticky;
+    width: 70%;
   }
 }
 
@@ -600,24 +618,121 @@ img {
   margin: 0;
 }
 
-.admin-post-controls form {
+/* .admin-post-controls form {
   display: inline-block;
-}
+} */
 
 .admin-post-controls .btn {
-  display: inline-block;
-  /* background-color: var(--black); */
-  /* color: var(--gray-light); */
+  display: flex;
+  flex-direction: column;
   color: #fff;
   border: 0;
   text-decoration: none;
   font-size: 0.8rem;
   padding: 4px 8px;
   line-height: 2;
+  text-align: center;
 }
 
 .admin-posts li {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  border-top: solid 1px #ddd;
+  gap: 10px;
+}
+
+.dashboard-section,
+.login-section {
+  margin: 0 1rem;
+}
+
+/* Contact */
+.contact {
+  background: #fff;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.contact-content {
+  padding: 0 20px;
+}
+
+.contact-container {
+  background-color: var(--background-color);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+.contact-header h2 {
+  color: #333;
+  text-align: center;
+}
+
+.contact-header p {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.input-group textarea {
+  resize: none; /* Disables resizing of the textarea */
+}
+
+.submit-btn {
+  /* width: 100%; */
+  padding: 15px 30px;
+  border: none;
+  background-color: var(--deep-cyan);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: orange;
+}
+
+/* Thanks */
+.thank-you-container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* width: 90%; */
+  /* max-width: 600px; */
+}
+.thank-you-container h1 {
+  color: var(--deep-cyan);
+}
+.thank-you-container p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
 }

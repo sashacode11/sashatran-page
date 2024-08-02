@@ -26,21 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Hamburger menu
-// document.addEventListener('DOMContentLoaded', function () {
-//   const menuIcon = document.querySelector('.menu-icon');
-//   const navMenu = document.querySelector('.header__nav ul');
-
-//   menuIcon.addEventListener('click', function () {
-//     navMenu.classList.toggle('collapsed');
-//   });
-
-// document.querySelectorAll('.nav-link').forEach(n =>
-//   n.addEventListener('click', () => {
-//     navMenu.classList.remove('collapsed');
-//   })
-// );
-// });
-
 document.addEventListener('DOMContentLoaded', function () {
   const menuIcon = document.querySelector('.menu-icon');
   const navMenu = document.querySelector('.header__nav ul');
@@ -58,3 +43,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Contact
+// document.addEventListener('DOMContentLoaded', function () {
+//   document
+//     .getElementById('contactForm')
+//     .addEventListener('submit', function (event) {
+//       event.preventDefault();
+
+//       const formData = {
+//         name: document.getElementById('name').value,
+//         email: document.getElementById('email').value,
+//         message: document.getElementById('message').value,
+//       };
+
+//       fetch('/submit-form', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(formData),
+//       })
+//         .then(response => response.text())
+//         .then(data => alert(data))
+//         .catch(error => console.error('Error:', error));
+//     });
+// });

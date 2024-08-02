@@ -1,0 +1,45 @@
+<div class="contact-header">
+  <h2>Contact Me</h2>
+  <p>
+    Your questions and comments are important to me. Please complete the form
+    below, and I'll respond as promptly as possible.
+  </p>
+</div>
+<div class="contact-container">
+  <form action="/submit-form" method="POST" class="contact-form">
+    <!-- <input type="hidden" name="_subject" value="New message wooo!" /> -->
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter Your Name"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter Your Email"
+        required
+      />
+    </div>
+    <!-- <input type="hidden" name="_next" value="http://localhost:5000/thanks" /> -->
+    <div class="input-group">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Enter Your Message"
+        cols="50"
+        rows="10"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
