@@ -6,6 +6,7 @@
   --gray-light: #e4e4e4;
   --red: #b30000;
   --deep-cyan: #284b63;
+  --blue: #337ab7;
   --background-color: #f4f5f5;
   /* --background-color: #faf5ee; */
   --font-size-base: 1rem;
@@ -24,12 +25,12 @@ body {
 }
 
 a {
-  /* color: var(--black); */
-  color: #337ab7;
+  color: var(--black);
 }
 
 h1 {
   font-size: var(--font-size-xl);
+  margin-bottom: 1rem;
 }
 h2 {
   font-size: var(--font-size-lg);
@@ -416,7 +417,7 @@ img {
 
 .articles,
 .about {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .home-hero {
@@ -516,7 +517,13 @@ img {
   .contact-container {
     left: 25%;
     position: sticky;
-    width: 70%;
+  }
+
+  .contact-content {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -536,7 +543,7 @@ img {
 
 .article-title:hover {
   transform: translateY(-5px);
-  color: #052d3d;
+  color: var(--blue);
 }
 
 .pagination {
@@ -714,6 +721,7 @@ img {
   border-radius: 5px;
 }
 
+.btn:hover,
 .submit-btn:hover {
   background-color: orange;
 }
@@ -735,4 +743,8 @@ img {
   font-size: 1.1em;
   line-height: 1.6;
   color: #555;
+}
+
+.post-form {
+  margin-bottom: 10px;
 }
