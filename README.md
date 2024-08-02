@@ -19,5 +19,6 @@ This web application provides a user-friendly interface for managing personal ta
 - Summernote Rich Text
 
 # Projects UI
-![screencapture](https://github.com/user-attachments/assets/24b96ccb-e088-4a9b-9c55-b15985302961)
+![screencapture-localhost-5000-2024-08-02-16_49_27](https://github.com/user-attachments/assets/60214af5-fcb9-41cc-bf44-80934190b796)
+
 
