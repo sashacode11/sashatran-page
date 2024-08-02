@@ -6,6 +6,8 @@ $ npm init -y
 $ npm i bcrypt connect-mongo cookie-parser dotenv ejs express express-ejs-layouts express-session jsonwebtoken method-override mongoose
 $ npm run dev
 
+navigate to: http://localhost:5000/
+
 # Script in package.json
 
     "start": "app.js",
