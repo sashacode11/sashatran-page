@@ -21,4 +21,9 @@ This web application provides a user-friendly interface for managing personal ta
 # Projects UI
 ![screencapture-localhost-5000-2024-08-02-16_49_27](https://github.com/user-attachments/assets/60214af5-fcb9-41cc-bf44-80934190b796)
 
+`
+$ npm init -y
+$ npm i bcrypt connect-mongo cookie-parser dotenv ejs express express-ejs-layouts express-session jsonwebtoken method-override mongoose
+$ npm run dev
 
+`

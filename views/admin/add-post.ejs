@@ -3,28 +3,29 @@
   <h2>Add New Project</h2>
 </div>
 
+<p>Fields marked with <span class="required-asterisk">*</span> are required.</p>
+
 <form class="post-form" action="/add-post" method="POST">
-  <label for="image"><b>Image URL</b></label>
-  <input type="text" placeholder="Image URL" name="image" />
+  <label for="image"><b>Image URL <span class="required-asterisk">*</span></b></label>
+  <input type="text" placeholder="Image URL" name="image" required oninvalid="this.setCustomValidity('Please enter the image URL.')" oninput="this.setCustomValidity('')" />
 
-  <label for="title"><b>Title</b></label>
-  <input type="text" placeholder="Post Title" name="title" />
+  <label for="title"><b>Title <span class="required-asterisk">*</span></b></label>
+  <input type="text" placeholder="Post Title" name="title" required oninvalid="this.setCustomValidity('Please enter a title.')" oninput="this.setCustomValidity('')" />
 
-  <label for="summary"><b>Summary</b></label>
-  <input type="text" placeholder="Post Summary" name="summary" />
+  <label for="summary"><b>Summary <span class="required-asterisk">*</span></b></label>
+  <input type="text" placeholder="Post Summary" name="summary" required oninvalid="this.setCustomValidity('Please enter a summary')" oninput="this.setCustomValidity('')" />
 
-  <label for="body"><b>Content</b></label>
-  <textarea id="summernote" name="body" cols="50" rows="7"></textarea>
+  <label for="body"><b>Content <span class="required-asterisk">*</span></b></label>
+  <textarea id="summernote" name="body" cols="50" rows="7" required oninvalid="this.setCustomValidity('Please enter the content.')" oninput="this.setCustomValidity('')" ></textarea>
 
   <label for="tools"><b>Tools Used</b></label>
-  <textarea name="tools"></textarea>
+  <textarea name="tools" ></textarea>
 
   <label for="projectUrl"><b>Project URL</b></label>
-  <input type="text" placeholder="Project URL" name="projectUrl" />
+  <input type="text" placeholder="Project URL" name="projectUrl"  />
 
   <input type="submit" value="Add" class="btn" />
 </form>
-
 <!-- summernote rich text -->
 <link
   href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"

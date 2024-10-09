@@ -4,26 +4,25 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   image: {
     type: String,
-    required: true,
+    required: [true, 'Image URL is required'],
   },
   title: {
     type: String,
-    required: true,
+    required: [true, 'Title is required'],
   },
   summary: {
     type: String,
-    required: true,
+    required: [true, 'Summary is required'],
   },
   body: {
     type: String,
-    required: true,
+    required: [true, 'Content is required'],
   },
   tools: {
     type: Array,
   },
   projectUrl: {
     type: String,
-    required: true,
   },
 });
 

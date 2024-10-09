@@ -12,3 +12,5 @@ navigate to: http://localhost:5000/
 
     "start": "app.js",
     "dev": "nodemon app.js"
+
+To add project as an admin role: http://localhost:5000/login
